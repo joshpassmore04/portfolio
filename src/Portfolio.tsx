@@ -3,8 +3,8 @@ import Home from "./pages/Home";
 
 function Portfolio() {
   return (
-    <div className="bg-main bg-cover bg-no-repeat h-screen w-screen flex justify-start items-start">
-      <div className="flex flex-col items-center justify-start lg:mt-60 mt-20 p-5 lg:ml-40 text-white">
+    <div className="bg-main bg-cover bg-no-repeat h-screen w-screen justify-start items-start overflow-x-hidden">
+      <div className=" text-white">
         <HashRouter>
           <Routes>
             <Route path="/">

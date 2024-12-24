@@ -10,7 +10,7 @@ export default {
         main: "url('blurry-gradient-haikei.png')"
       },
       fontFamily: {
-        default: ["Onest", "sans-serif"],
+        normal: ["JetBrains Mono", "sans-serif"],
         headings: ["Lexend Tera", "sans-serif"],
       },
       keyframes: {
