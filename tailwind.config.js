@@ -5,7 +5,41 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        main: "url('blurry-gradient-haikei.png')"
+      },
+      fontFamily: {
+        default: ["Onest", "sans-serif"],
+        headings: ["Lexend Tera", "sans-serif"],
+      },
+      keyframes: {
+        headerFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translate3d(0, 200%, 0)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'none',
+          },
+        },
+        textFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translate3d(0, 250%, 0)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'none',
+          },
+        },
+      },
+      animation: {
+        headerFade: 'headerFade 1s ease-in-out', // 1s duration, ease-in-out timing
+        textFade: 'textFade 1.2s ease-in-out', // 1s duration, ease-in-out timing
+      },
+    },
   },
   plugins: [],
 }
