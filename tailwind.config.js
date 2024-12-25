@@ -24,7 +24,7 @@ export default {
             transform: 'none',
           },
         },
-        textFade: {
+        secondFade: {
           '0%': {
             opacity: 0,
             transform: 'translate3d(0, 250%, 0)',
@@ -47,7 +47,7 @@ export default {
       },
       animation: {
         headerFade: 'headerFade 1s ease-in-out', // 1s duration, ease-in-out timing
-        textFade: 'textFade 1.2s ease-in-out', // 1s duration, ease-in-out timing
+        secondFade: 'secondFade 1.2s ease-in-out', // 1s duration, ease-in-out timing
         lastFade: 'lastFade 3s ease-in-out',
       },
     },
