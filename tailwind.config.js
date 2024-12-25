@@ -34,10 +34,21 @@ export default {
             transform: 'none',
           },
         },
+        lastFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translate3d(0, 50%, 0)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'none',
+          },
+        },
       },
       animation: {
         headerFade: 'headerFade 1s ease-in-out', // 1s duration, ease-in-out timing
         textFade: 'textFade 1.2s ease-in-out', // 1s duration, ease-in-out timing
+        lastFade: 'lastFade 3s ease-in-out',
       },
     },
   },
