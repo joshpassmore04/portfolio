@@ -1,6 +1,7 @@
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Java from "./pages/languages/Java";
+import LanguagePageViewer from "./components/LanguagePageViewer";
 
 function Portfolio() {
   return (
@@ -12,7 +13,7 @@ function Portfolio() {
               <Route path="/">
                 <Route index element={<Navigate to="home" replace />} />
                 <Route path="home" element={<Home />} />
-                <Route path="java" element={<Java />} />
+                <Route path="java" element={<LanguagePageViewer language={Java} />} />
               </Route>
             </Routes>
           </HashRouter>
