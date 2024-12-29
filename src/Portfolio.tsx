@@ -5,9 +5,9 @@ import LanguagePageViewer from "./components/LanguagePageViewer";
 
 function Portfolio() {
   return (
-    <div className="bg-main bg-cover bg-no-repeat h-screen w-screen flex flex-col justify-between overflow-x-hidden">
+    <div className="bg-main bg-cover h-screen w-screen flex justify-between">
       {/* Main Content */}
-      <div className="flex flex-grow text-white lg:pt-60 pt-20 lg:pr-44 p-5 lg:pl-40 font-normal">
+      <div className="flex text-white w-full h-full lg:pt-20 pt-10 pb-5 p-5 lg:pr-44 lg:pl-40 font-normal">
           <HashRouter>
             <Routes>
               <Route path="/">

@@ -4,11 +4,11 @@ import { SiCplusplus, SiKotlin } from "react-icons/si";
 
 const Home = () => {
     return (
-        <div className="flex flex-col h-full justify-between">
+        <div className="h-full flex flex-col justify-between">
             {/* Top Content */}
             <div className="space-y-5">
                 <h1 className="font-headings text-5xl font-extrabold animate-headerFade">
-                    Josh Passmore's Portfolio
+                    Josh's Portfolio
                 </h1>
                 <div className="animate-secondFade break-words space-y-2">
                     <h2 className="text-xl font-semibold">Software engineer who loves old tech and games!</h2>
@@ -35,7 +35,7 @@ const Home = () => {
             </div>
 
             {/* Bottom Buttons */}
-            <div className="flex justify-start items-center space-x-5 mt-12 pt-10 pb-12 animate-lastFade">
+            <div className="flex flex-row justify-start items-center lg:pb-5 space-x-5 animate-lastFade">
                 <a href="https://react.dev/">
                     <img src="neocities_buttons/88x31react.gif" alt="React Button" />
                 </a>

@@ -1,4 +1,6 @@
 interface LanguagePageContent {
+    projectName: string;
+    description: string;
     content: () => JSX.Element;   // Page content, a function that returns JSX
     videoUrl?: string;            // Optional video URL
 }

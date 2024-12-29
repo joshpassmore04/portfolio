@@ -59,7 +59,7 @@ export default {
         headerFade: 'headerFade 1s ease-in-out', // 1s duration, ease-in-out timing
         secondFade: 'secondFade 1.2s ease-in-out', // 1s duration, ease-in-out timing
         lastFade: 'lastFade 3s ease-in-out',
-        leftSlideFade: 'leftSlideFade 1.5s ease-in-out',
+        leftSlideFade: 'leftSlideFade 1s ease-in-out',
       },
     },
   },

@@ -3,11 +3,11 @@ import { IconType } from 'react-icons';
 import { useNavigate } from 'react-router-dom';
 import { cva } from 'class-variance-authority';
 
-// ChatGPT helped with this file!
 interface LanguageButtonProps {
-  Icon: IconType; // Specify the react-icons Icon type
-  size?: number;  // Size of the icon
-  route: string;  // Route to navigate to
+  Icon: IconType;
+  size?: number;
+  route?: string;
+  callback?: () => void; // Optional callback function
 }
 
 const languageButtonStyles = cva(
@@ -46,11 +46,15 @@ const iconStyles = cva(
   'relative filter transition-transform duration-500 delay-500 group-hover:invert group-hover:brightness-150'
 );
 
-const LanguageButton: React.FC<LanguageButtonProps> = ({ Icon, size = 32, route }) => {
+const LanguageButton: React.FC<LanguageButtonProps> = ({ Icon, size = 32, route, callback }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(route);
+    if (route) {
+      navigate(route)
+    } else if (callback) {
+      callback()
+    }
   };
 
   return (
