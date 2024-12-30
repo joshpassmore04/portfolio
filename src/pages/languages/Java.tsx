@@ -2,12 +2,6 @@ import { LanguagePageContent, LanguagePage } from "../../components/LanguagePage
 import BankSystem from "./projects/BankSystem";
 import ZulfBungee from "./projects/ZulfBungee";
 
-const Test = () => {
-  return (
-    <p>Hi</p>
-  )
-}
-
 class JavaPage extends LanguagePage {
   name: string = "Java";
   pages: LanguagePageContent[] = [

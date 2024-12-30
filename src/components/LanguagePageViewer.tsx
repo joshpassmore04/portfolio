@@ -3,8 +3,7 @@ import { LanguagePage } from "./LanguagePage";
 import Video from "./Video";
 import LanguageButton from "./LanguageButton";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
-import { HiHome } from "react-icons/hi";
-import { BiLeftArrow } from "react-icons/bi";
+import { HiHome } from "react-icons/hi"
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 interface LanguagePageViewerProps {
