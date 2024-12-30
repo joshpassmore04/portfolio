@@ -3,6 +3,7 @@ import { LanguagePage } from "./LanguagePage";
 import Video from "./Video";
 import LanguageButton from "./LanguageButton";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
+import { HiHome } from "react-icons/hi";
 
 interface LanguagePageViewerProps {
     language: new () => LanguagePage; // accepts a language class constructor
@@ -29,7 +30,7 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
     return (
         <div className="flex flex-col lg:flex-row w-full h-full animate-leftSlideFade">
             {/* Left Section */}
-            <div className="lg:w-2/3 w-full h-full flex flex-col justify-start space-y-5 overflow-y-auto sm:overflow-visible">
+            <div className="lg:w-2/3 w-full h-full flex flex-col justify-start space-y-5 overflow-y-scroll sm:overflow-visible">
                 <h1 className="font-headings text-5xl font-extrabold break-words">
                     {languagePages.name}
                 </h1>
@@ -45,17 +46,21 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
             </div>
 
             {/* Right Section */}
-            <div className="lg:w-1/2 w-full h-full min-w-screen flex flex-col flex-grow justify-center items-center p-5">
+            <div className="w-full lg:w-3/4 h-full flex flex-col justify-center items-center lg:p-5 pt-3">
                 {/* Video Container */}
-                <div className="w-full lg:h-2/3 h-auto max-h-[80vh] rounded-lg">
+                <div className="w-full lg:h-2/3 h-auto max-h-[80vh]">
                     {currentPage.videoUrl && <Video src={currentPage.videoUrl} />}
                 </div>
                 {/* Arrows Container */}
                 <div className="flex flex-row lg:justify-end justify-center w-full mt-5 space-x-3">
+                    {currentPageIndex === 0 && (
+                        <LanguageButton Icon={HiHome} size={32} route="/home" />
+                    )}
                     <LanguageButton Icon={IoMdArrowRoundBack} size={32} callback={prevPage} />
                     <LanguageButton Icon={IoMdArrowRoundForward} size={32} callback={nextPage} />
                 </div>
             </div>
+
 
         </div>
     )

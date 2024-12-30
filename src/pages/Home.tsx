@@ -4,10 +4,10 @@ import { SiCplusplus, SiKotlin } from "react-icons/si";
 
 const Home = () => {
     return (
-        <div className="h-full flex flex-col justify-between">
+        <div className="h-full flex flex-col justify-between overflow-y-hidden">
             {/* Top Content */}
             <div className="space-y-5">
-                <h1 className="font-headings text-5xl font-extrabold animate-headerFade">
+                <h1 className="font-headings w-full lg:text-5xl text-4xl font-extrabold animate-headerFade">
                     Josh's Portfolio
                 </h1>
                 <div className="animate-secondFade break-words space-y-2">
@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
                 <div className="mt-5 flex flex-col space-y-5 animate-secondFade">
                     <div className="flex flex-row space-x-5">
-                        <LanguageButton Icon={FaPython} size={32} route="/home" />
+                        <LanguageButton Icon={FaPython} size={32} route="/python" />
                         <LanguageButton Icon={FaJava} size={32} route="/java" />
                         <LanguageButton Icon={SiKotlin} size={32} route="/home" />
                     </div>
@@ -35,7 +35,7 @@ const Home = () => {
             </div>
 
             {/* Bottom Buttons */}
-            <div className="flex flex-row justify-start items-center lg:pb-5 space-x-5 animate-lastFade">
+            <div className="flex flex-row flex-shrink justify-start items-center lg:pb-5 space-x-5 animate-lastFade">
                 <a href="https://react.dev/">
                     <img src="neocities_buttons/88x31react.gif" alt="React Button" />
                 </a>
