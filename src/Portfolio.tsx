@@ -8,7 +8,7 @@ function Portfolio() {
   return (
     <div className="bg-main bg-cover h-screen w-screen flex">
       {/* Main Content */}
-      <div className="flex text-white w-full h-full lg:pt-20 pt-10 pb-5 p-5 lg:pr-44 lg:pl-40 font-normal">
+      <div className="flex text-white w-full h-full pt-10 p-5 lg:pr-44 lg:pl-40 font-normal">
           <HashRouter>
             <Routes>
               <Route path="/">

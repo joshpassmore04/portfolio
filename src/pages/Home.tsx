@@ -15,9 +15,10 @@ const Home = () => {
                     <div>
                         <p>
                             I specialise in mainly backend development. Below are the main
-                            languages I am familiar/comfortable with - take a look and see
+                            languages I am familiar/comfortable with - click the buttons to take a look and see
                             what projects I have done in each one!
                         </p>
+                        <p className="pt-5 font-bold">This portfolio is still under development, so some pages might not be finished just yet!</p>
                     </div>
                 </div>
                 <div className="mt-5 flex flex-col space-y-5 animate-secondFade">

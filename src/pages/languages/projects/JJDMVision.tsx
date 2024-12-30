@@ -7,7 +7,8 @@ const JJDMVision = () => {
         "Getting information from a database (SQLite)",
         "How to structure REST APIs",
         "Authentication and server-side session managment",
-        "Some frontend React concepts (e.g. state)"
+        "Some frontend React concepts (e.g. state)",
+        "Basic unit testing"
     ];
 
     return (
@@ -15,9 +16,8 @@ const JJDMVision = () => {
             <SkillsLearnt skills={skills} />
             <div className="mt-5">
                 <p>This project was for a university assignment, completed in a team of 3 others.</p>
-                <p>This was my first ever Java project, and I ended up really enjoying it and over the course of 3 years, ended up making something I am quite proud of.</p>
-                <p>I took a break from maintaining it in late 2023, but decided recently to start working on it again.</p>
-                <p>In total, it has about 2,000 downloads at the time of writing this.</p>
+                <p>I was in charge of the backend mainly, and helped connect it to the frontend. Another team member was responsible for the design.</p>
+                <p>In the process, I learnt alot about the internals of web apps, specifically how to design and document REST controllers.</p>
             </div>
 
         </div>

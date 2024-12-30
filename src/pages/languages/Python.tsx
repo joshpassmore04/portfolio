@@ -6,9 +6,11 @@ class Python extends LanguagePage {
     pages: LanguagePageContent[] = [
       {
         projectName: "JJDMVision",
+        projectLink: "https://github.com/jjdmvisionapp",
         description: "A chatbot and image classification web app",
         content: JJDMVision,
         videoUrl: "videos/jjdmvision1.mp4",
+        unfinished: false,
       },
     ];
   

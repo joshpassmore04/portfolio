@@ -4,6 +4,8 @@ import Video from "./Video";
 import LanguageButton from "./LanguageButton";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import { HiHome } from "react-icons/hi";
+import { BiLeftArrow } from "react-icons/bi";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 
 interface LanguagePageViewerProps {
     language: new () => LanguagePage; // accepts a language class constructor
@@ -34,13 +36,29 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
                 <h1 className="font-headings text-5xl font-extrabold break-words">
                     {languagePages.name}
                 </h1>
-                <div className="overflow-y-auto h-full w-full">
+                <div className="overflow-y-auto h-full w-full flex">
                     <div>
-                        <h2 className="font-headings text-xl">{currentPage.projectName}</h2>
+                        <h2 className="font-headings flex flex-row text-xl items-center py-2">
+                            <a href={currentPage.projectLink} className="hover:underline">
+                                {currentPage.projectName}
+                            </a>
+                            {currentPage.unfinished && (
+                                <div className="pl-3">
+                                    <div className="rounded-lg px-2 py-1 flex items-center justify-center bg-gray-500 bg-opacity-75 text-xs text-black overflow-hidden text-ellipsis whitespace-nowrap">
+                                        Unfinished
+                                    </div>
+                                </div>
+                            )}
+                            <div className="flex flex-row items-center pl-5 space-x-2 text-xs font-normal">
+                                <FaLongArrowAltLeft />
+                                <p>click here to see the project's GitHub page!</p>
+                            </div>
+                        </h2>
                         <p className="font-semibold">{currentPage.description}</p>
                         <div className="mt-5 space-y-3 flex w-full">
                             {currentPage.content()}
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -56,8 +74,12 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
                     {currentPageIndex === 0 && (
                         <LanguageButton Icon={HiHome} size={32} route="/home" />
                     )}
-                    <LanguageButton Icon={IoMdArrowRoundBack} size={32} callback={prevPage} />
-                    <LanguageButton Icon={IoMdArrowRoundForward} size={32} callback={nextPage} />
+                    {currentPageIndex > 0 && (
+                        <LanguageButton Icon={IoMdArrowRoundBack} size={32} callback={prevPage} />
+                    )}
+                    {currentPageIndex < languagePages.pages.length - 1 && (
+                        <LanguageButton Icon={IoMdArrowRoundForward} size={32} callback={nextPage} />
+                    )}
                 </div>
             </div>
 
