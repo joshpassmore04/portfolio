@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        main: "url('images/blurry-gradient-haikei.png')"
+        main: "url('/blurry-gradient-haikei.png')" 
       },
       fontFamily: {
         normal: ["JetBrains Mono", "sans-serif"],
