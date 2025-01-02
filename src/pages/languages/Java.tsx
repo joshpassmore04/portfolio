@@ -1,6 +1,8 @@
 import { LanguagePageContent, LanguagePage } from "../../components/LanguagePage";
+import PageMediaType from "../../components/PageMediaType";
 import BankSystem from "./projects/BankSystem";
 import ZulfBungee from "./projects/ZulfBungee";
+import ZulfEngineJava from "./projects/ZulfEngineJava";
 
 class JavaPage extends LanguagePage {
   name: string = "Java";
@@ -10,7 +12,8 @@ class JavaPage extends LanguagePage {
       projectLink: "https://github.com/Zulfen/ZulfBungee",
       description: "A Minecraft scripting language addon which adds networking support",
       content: ZulfBungee,
-      videoUrl: "videos/zulfbungee1.mp4",
+      url: "videos/zulfbungee1.mp4",
+      mediaType: PageMediaType.VIDEO,
       unfinished: false,
     },
     {
@@ -20,6 +23,15 @@ class JavaPage extends LanguagePage {
       content: BankSystem,
       unfinished: false,
     },
+    {
+      projectName: "ZulfEngine (Java)",
+      projectLink: "https://github.com/Zulfen/ZulfEngine-Java",
+      description: "The start of a simple game engine for Java",
+      content: ZulfEngineJava,
+      url: "videos/zulfenginejava1.mp4",
+      mediaType: PageMediaType.VIDEO,
+      unfinished: true
+    }
   ];
 
   constructor() {

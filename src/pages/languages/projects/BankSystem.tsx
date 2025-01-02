@@ -3,7 +3,8 @@ import SkillsLearnt from "../../../components/SkillsLearnt";
 const BankSystem = () => {
 
     const skills: string[] = [
-        "String formatting"
+        "String formatting",
+        "Simple file based I/O"
     ]
 
     return (

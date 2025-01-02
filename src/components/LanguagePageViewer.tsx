@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { LanguagePage } from "./LanguagePage";
-import Video from "./Video";
+import PageMedia from "./PageMedia";
 import LanguageButton from "./LanguageButton";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import { HiHome } from "react-icons/hi"
@@ -38,7 +38,7 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
                 <div className="overflow-y-auto h-full w-full flex">
                     <div>
                         <h2 className="font-headings flex flex-row text-xl items-center py-2">
-                            <a href={currentPage.projectLink} className="hover:underline">
+                            <a href={currentPage.projectLink} className="hover:underline" target="_blank">
                                 {currentPage.projectName}
                             </a>
                             {currentPage.unfinished && (
@@ -62,11 +62,12 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
                 </div>
             </div>
 
-            {/* Right Section */}
             <div className="w-full lg:w-3/4 h-full flex flex-col justify-center items-center lg:p-5 pt-3">
                 {/* Video Container */}
                 <div className="w-full lg:h-2/3 h-auto max-h-[80vh]">
-                    {currentPage.videoUrl && <Video src={currentPage.videoUrl} />}
+                    {currentPage.mediaType && (
+                        currentPage.url && <PageMedia src={currentPage.url} type={currentPage.mediaType} />
+                    )}
                 </div>
                 {/* Arrows Container */}
                 <div className="flex flex-row lg:justify-end justify-center w-full mt-5 space-x-3">
@@ -81,7 +82,6 @@ const LanguagePageViewer: React.FC<LanguagePageViewerProps> = ({ language }) => 
                     )}
                 </div>
             </div>
-
 
         </div>
     )

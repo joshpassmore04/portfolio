@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Java from "./pages/languages/Java";
 import LanguagePageViewer from "./components/LanguagePageViewer";
 import Python from "./pages/languages/Python";
+import Kotlin from "./pages/languages/Kotlin";
+import CPP from "./pages/languages/CPP";
 
 function Portfolio() {
   return (
@@ -16,6 +18,8 @@ function Portfolio() {
                 <Route path="home" element={<Home />} />
                 <Route path="java" element={<LanguagePageViewer language={Java} />} />
                 <Route path="python" element={<LanguagePageViewer language={Python} />} />
+                <Route path="kotlin" element={<LanguagePageViewer language={Kotlin} />} />
+                <Route path="cpp" element={<LanguagePageViewer language={CPP} />} />
               </Route>
             </Routes>
           </HashRouter>

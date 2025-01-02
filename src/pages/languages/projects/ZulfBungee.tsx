@@ -7,6 +7,7 @@ const ZulfBungee = () => {
         "Thread safe code and the challenges involved with it",
         "Networking w/ sockets",
         "Providing support to clients/end users",
+        "Basic Git skills"
     ];
 
     return (

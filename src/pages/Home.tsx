@@ -7,8 +7,10 @@ const Home = () => {
         <div className="h-full flex flex-col justify-between overflow-y-hidden">
             {/* Top Content */}
             <div className="space-y-5">
-                <h1 className="font-headings w-full lg:text-5xl text-4xl font-extrabold animate-headerFade">
-                    Josh's Portfolio
+                <h1 className="font-headings w-full lg:text-5xl text-4xl font-extrabold animate-headerFade hover:underline">
+                    <a href="https://github.com/joshpassmore04/portfolio" target="_blank">
+                        Josh's Portfolio
+                    </a>
                 </h1>
                 <div className="animate-secondFade break-words space-y-2">
                     <h2 className="text-xl font-semibold">Software engineer who loves old tech and games!</h2>
@@ -25,11 +27,11 @@ const Home = () => {
                     <div className="flex flex-row space-x-5">
                         <LanguageButton Icon={FaPython} size={32} route="/python" />
                         <LanguageButton Icon={FaJava} size={32} route="/java" />
-                        <LanguageButton Icon={SiKotlin} size={32} route="/home" />
+                        <LanguageButton Icon={SiKotlin} size={32} route="/kotlin" />
                     </div>
                     <p>..and here is what I am learning:</p>
                     <div className="flex flex-row space-x-5">
-                        <LanguageButton Icon={SiCplusplus} size={32} route="/home" />
+                        <LanguageButton Icon={SiCplusplus} size={32} route="/cpp" />
                         <LanguageButton Icon={FaReact} size={32} route="/home" />
                     </div>
                 </div>
@@ -38,10 +40,11 @@ const Home = () => {
             {/* Bottom Buttons */}
             <div className="flex flex-row flex-shrink justify-start items-center lg:pb-5 space-x-5 animate-lastFade">
                 <a href="https://react.dev/">
-                    <img src="neocities_buttons/88x31react.gif" alt="React Button" />
+                    <img src="neocities_buttons/88x31react.gif" />
                 </a>
-                <img src="neocities_buttons/javanow.gif" alt="Java Now Button" />
-                <img src="neocities_buttons/netscapenow30.gif" alt="Netscape Button" />
+                <img src="neocities_buttons/javanow.gif" />
+                <img src="neocities_buttons/netscapenow30.gif" />
+                <img src="neocities_buttons/compaq.gif" />
             </div>
         </div>
     );
